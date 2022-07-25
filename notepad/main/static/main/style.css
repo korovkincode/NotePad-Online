@@ -46,3 +46,6 @@ body {
 .slug {
 	font-size: 30px;
 }
+.row {
+	display: flex;
+}
