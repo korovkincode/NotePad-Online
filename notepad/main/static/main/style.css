@@ -19,15 +19,30 @@ body {
 .new {
 	margin-top: 7px;
 	height: 50px;
-	border-color: #f1c40f;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	text-decoration: none;
 	color: #fff;
-	background-image: -webkit-linear-gradient(45deg, #f1c40f 50%, transparent 50%);
-	background-image: linear-gradient(45deg, #f1c40f 50%, transparent 50%);
-	background-position: 100%;
-	background-size: 400%;
-	-webkit-transition: background 300ms ease-in-out;
-	transition: background 300ms ease-in-out;
+	backface-visibility: hidden;
+	border: 0.3rem solid transparent;
+	border-radius: 3rem;
+	border-color: transparent;
+	background-color: #fff;
+	color: #000;
+	transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
 }
 .new:hover {
-	background-position: 0;
+	transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+}
+.lab-sec {
+	padding-top: 20px;
+	text-align: center;
+}
+.label {
+	font-size: 50px;
+}
+.slug {
+	font-size: 30px;
 }
