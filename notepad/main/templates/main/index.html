@@ -5,4 +5,15 @@
 	<span class="label">Notely<br></span>
 	<span class="slug txt-rotate" data-rotate='["Easy to work, easy to use"]'></span>
 </div>
+<div class="recent-notes">
+	<div class="row">
+	{% for note in notes %}
+		<div class="col-lg-4 note">
+			Title: {{ note.title }}
+			Author: {{ note.author }}
+			Text: {{ note.text }}
+		</div>
+	{% endfor %}
+	</div>
+</div>
 {% endblock %}
