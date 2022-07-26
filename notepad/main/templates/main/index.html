@@ -2,18 +2,22 @@
 
 {% block content %}
 <div class="lab-sec">
-	<span class="label">Notely<br></span>
-	<span class="slug txt-rotate" data-rotate='["Easy to work, easy to use"]'></span>
+	<span class="label txt-rotate" data-rotate='["Easy to work, easy to use"]'></span>
 </div>
 <div class="recent-notes">
-	<div class="row">
-	{% for note in notes %}
-		<div class="col-lg-4 note">
-			Title: {{ note.title }}
-			Author: {{ note.author }}
-			Text: {{ note.text }}
+	<h2 style="text-align: center; margin-bottom: 30px;">Recent notes</h1>
+	{% if notes %}
+		<div class="row">
+		{% for note in notes %}
+			<div class="col-lg-4 note">
+				<div>Title: <span>{{ note.title }}</span></div>
+				<div>Author: <span>{{ note.author }}</span></div>
+				<div class="editor">{{ note.text }}</div>
+			</div>
+		{% endfor %}
 		</div>
-	{% endfor %}
-	</div>
+	{% else %}
+		<h3 style="text-align: center;">No notes found. Create one</h3>
+	{% endif %}
 </div>
 {% endblock %}

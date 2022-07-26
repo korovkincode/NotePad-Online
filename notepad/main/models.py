@@ -7,7 +7,7 @@ class Notes(models.Model):
 	title = models.CharField('Название', max_length = 30)
 	author = models.CharField('Автор', max_length = 30)
 	text = models.TextField('Статья')
-	date = models.DateTimeField(null = True)
+	date = models.DateTimeField(auto_now_add=True, blank=True)
 
 	def __str__(self):
 		return f'{self.noteid}|{self.title}|{self.author}|{self.text}'
