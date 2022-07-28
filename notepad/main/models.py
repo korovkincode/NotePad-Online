@@ -4,9 +4,9 @@ from django.db import models
 
 class Notes(models.Model):
 	noteid = models.CharField('NoteID', max_length = 10)
-	title = models.CharField('Название', max_length = 30)
-	author = models.CharField('Автор', max_length = 30)
-	text = models.TextField('Статья')
+	title = models.CharField('Title', max_length = 30)
+	author = models.CharField('Author', max_length = 30)
+	text = models.TextField(help_text = "")
 	date = models.DateTimeField(auto_now_add=True, blank=True)
 
 	def __str__(self):

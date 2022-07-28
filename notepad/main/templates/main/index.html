@@ -10,7 +10,7 @@
 		<div class="row">
 		{% for note in notes %}
 			<div class="col-lg-4 note">
-				<div>Title: <span>{{ note.title }}</span></div>
+				<div>Title: <span><a href="/{{ note.noteid }}">{{ note.title }}</a></span></div>
 				<div>Author: <span>{{ note.author }}</span></div>
 				<div class="editor">{{ note.text }}</div>
 			</div>

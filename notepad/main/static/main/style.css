@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+-webkit-scrollbar {
+   display: none;
+ }
 body {
 	background: #FF416C;
 	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
 	background: linear-gradient(to right, #FF4B2B, #FF416C);
 	font-family: 'Kanit', sans-serif;
 	color: #FCE77D;
+	overflow: hidden;
 }
 a {
 	text-decoration: none!important;
@@ -63,19 +67,18 @@ a:hover {
 .noteView {
 	font-size: 20px;
 	padding-top: 20px;
-	text-align: center;
 }
 .editor {
-	margin-top: 20px;
 	border-radius: 15px;
 	color: #ADE644;
 	background-color: #1F1F1D;
 	min-height: 230px;
 	width: 30%;
 	min-width: 250px;
-	text-align: left;
 	margin-left: auto;
 	margin-right: auto;
+	overflow: hidden;
+	text-align: left;
 }
 .recent-notes {
 	padding-top: 40px;
@@ -123,4 +126,20 @@ a:hover {
     #2bb673
   );
   box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+}
+input {border:0;outline:0;}
+input:focus {outline:none!important;}
+.form-c {
+	background-color: inherit;
+}
+.editorr {
+	margin-top: 20px;
+	border-radius: 15px;
+	color: #ADE644;
+	background-color: #1F1F1D;
+	min-height: 230px;
+	width: 30%;
+	min-width: 250px;
+	margin-left: auto;
+	margin-right: auto;
 }
